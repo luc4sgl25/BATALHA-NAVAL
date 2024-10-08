@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-image: url(World-of-Warships.jpg);
+    background-size: cover;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#gameContainer {
+    display: flex;
+    position: relative; 
+}
+
+#boardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#boardeasy, #boardhard {
+    display: grid;
+    gap: 1px; /* Espaçamento entre as células */
+    margin-bottom: 20px;
+}
+
+#boardeasy {
+    grid-template-columns: repeat(5, 50px); /* 5 colunas para o modo fácil */
+}
+
+#boardhard {
+    grid-template-columns: repeat(10, 50px); /* 10 colunas para o modo difícil */
+}
+option{
+    background-color: blue;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-image: url();
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: border-color 0.3s;
+}
+
+.cell:hover {
+    border-color: blue;
+}
+
+.cell.hit {
+    background-image: url(barco-explodindo_1009391-11115.avif);
+}
+
+.cell.miss {
+    background-image: url(mar-1685998140.jpg);
+}
+
+#history {
+    margin-left: 20px;
+    text-align: center;
+    overflow-y: auto; 
+    max-height: 400px; 
+    width: 200px; 
+}
+
+#history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#result {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+#score {
+    text-align: center;
+    position: absolute; 
+    top: 150px; 
+    left: 200px; 
+    z-index: 1000; 
+    background: rgba(255, 34, 34, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    opacity: 50%;
+}
+
+@media (max-width: 600px) {
+    .cell {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #boardeasy, #boardhard {
+        grid-template-columns: repeat(5, 40px);
+    }
+}

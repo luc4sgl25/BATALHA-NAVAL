@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha Naval</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Batalha Naval</h1>
+    <div id="controls">
+        <button id="startButton">Iniciar/Reiniciar Jogo</button>
+        <div>
+            <label for="difficulty">Dificuldade:</label>
+            <select id="difficulty">
+                <option value="easy">Fácil</option>
+                <option value="hard">Difícil</option>
+            </select>
+        </div>
+    </div>
+    <div id="gameContainer">
+        <div id="boardContainer">
+            <div id="boardeasy"></div>
+            <div id="boardhard"></div>
+        </div>
+        <div id="history">
+            <h2>Histórico de Jogadas da Máquina</h2>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <div id="result"></div>
+    <div id="score" style="display: none;">
+        <h2>Pontuação</h2>
+        <p>Jogador: <span id="playerScore">0</span></p>
+        <p>Máquina: <span id="computerScore">0</span></p>
+        <p>Acertos: <span id="playerHits">0</span></p>
+        <p>Erros: <span id="playerMisses">0</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
